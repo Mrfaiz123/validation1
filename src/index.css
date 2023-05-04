@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dashbored{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../public/images/dashbored.jpeg');
+  background-size: 100% 100%;
+}
+.go{
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.788)), url('../public/images/man1.jpg');
+  background-size: 100% 100%;
+}
+.heading{
+
+  letter-spacing: 2px;
+  /*padding-top: 100px;*/
+  border-right: 3px solid red;
+  animation-name: mr;
+  animation-duration: 5s;
+  white-space: nowrap;
+  overflow: hidden;
+  animation-timing-function:steps(30);
+}
+@keyframes mr{
+  0%{ width: 0ch; }
+  100%{ width: 27ch; }
+}
+.box {
+  box-shadow: 2px 2px 4px 6px cyan ;
+}
+
+@keyframes color-change {
+  0% { color: red; }
+  25%{color: yellow;}
+  50% { color: blue; }
+  75%{color: aqua;}
+  100% { color: green; }
+}
+
+/* Apply the animation to the text */
+.para{
+  animation: color-change 2s infinite;
+}
